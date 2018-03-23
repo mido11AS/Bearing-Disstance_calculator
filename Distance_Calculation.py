@@ -57,10 +57,21 @@ class Distance_App(QMainWindow,FORM_CLASS):
         
         
     def Bearing(self):
-#        p1lat = self.inputs[0]
-#        p1lon = self.inputs[1]
-#        p2lat = self.inputs[2]
-#        p2lon = self.inputs[3]
+"""
+    Calculates the bearing between two points.
+    The formulae used is the following:
+        θ = atan2(sin(Δlong).cos(lat2),
+                  cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong))
+    :Parameters:
+      - `pointA: The tuple representing the latitude/longitude for the
+        first point. Latitude and longitude must be in decimal degrees
+      - `pointB: The tuple representing the latitude/longitude for the
+        second point. Latitude and longitude must be in decimal degrees
+    :Returns:
+      The bearing in degrees
+    :Returns Type:
+      float
+    """
         self.pointA = (self.N_1,self.E_1)
         self.pointB = (self.N_2,self.E_2)
          
